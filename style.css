@@ -159,13 +159,14 @@ input[type=text], input[type=number], textarea, select
 	border:2px solid #436983;
 	border-radius:4px;
 	color:#eef0f2;
-	font-family:verdana;
-	font-size:1.38em;
+	font-family: 'Courier New', monospace;
+	font-size:1.3em;
 	font-weight:700;
 	height:1.6em;
 	margin:.11em 0;
+	width: 81%;
 	max-width:100%;
-	padding:0 .4em;
+	padding: 2px 2em 0 2em;
 	text-align:left;
 }
 
