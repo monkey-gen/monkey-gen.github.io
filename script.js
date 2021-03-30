@@ -1889,7 +1889,7 @@ function AsynchronouslyDownloadAMonkeyImage(address, img) {
     (downloadingImage.onload = function () {
         img.src = this.src;
     }),
-        (downloadingImage.src = monKeyImageEndpoint + address + "?svc=github-monkey-generator&background=true"),
+        (downloadingImage.src = monKeyImageEndpoint + address + "?svc=monkey-gen.github.io&background=true"),
         img.setAttribute("title", address);
 }
 
