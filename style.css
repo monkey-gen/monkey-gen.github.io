@@ -1,0 +1,349 @@
+body { 
+	display: grid;
+	grid-template-areas:
+	"article aside"
+	"footer footer";
+	grid-template-rows: 95% 5%;  
+	grid-template-columns: 60% 40%; 
+	height: 100vh;
+	background:#181818;
+	color:#b9bec1;
+	font-family: verdana;
+	font-size:1.1em;
+	margin:0;
+  }  
+/* Stack the layout on small devices/viewports. */
+/* @media all and (max-width: 575px) { */
+ @media all and (max-width: 1100px) { 
+  body { 
+    grid-template-areas: 
+      "article"
+      "aside"
+      "footer";
+    grid-template-rows: auto 1fr 70px 1fr 70px;  
+    grid-template-rows: auto auto auto auto auto;  
+    grid-template-columns: 1fr;
+ }
+}
+/* https://www.bhalash.com/archives/13544803259 */
+@media only screen 
+    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait),
+only screen
+    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape) {
+        body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "aside"
+      "nav"
+      "footer";
+    grid-template-rows: auto 1fr 70px 1fr 70px;  
+    grid-template-rows: auto auto auto auto auto;  
+    grid-template-columns: 1fr;
+ }
+}
+
+#pageHeader {
+  grid-area: header; 
+  }
+#pageFooter {
+	color: #333;
+  grid-area: footer;
+  }
+ 
+#donate {
+  display: flex;
+}
+
+#mainArticle { 
+  grid-area: article; 
+}
+#mainNav {  
+  grid-area: nav; 
+}
+#sideBar
+{ 
+	grid-area:aside;
+}
+
+
+div 
+{
+	padding:.8em 1.4em;
+}
+article 
+{
+	padding:2em 1.35em;
+	line-height: 1.25em; 
+}
+aside
+{
+	padding:5em 7em;
+	border-left: 2px dashed #111; 
+	border-left: 1px solid #111; 
+}
+
+
+#mainArticle
+{
+	background:#34383d;
+	color:#d0d4d6;
+}
+
+.w-100{
+	width: 400px;
+	height: 400px;
+}
+
+
+#sideBar
+{
+	background:#34383d; 
+	font-size: 0.95em;
+}
+
+a, a:visited
+{
+	color:#3d739d;
+	color:#387cb0; /* temp test slightly brighter */
+}
+
+a:hover
+{
+	color:#2f93df; /* #2f93df really bright. much more toned down: #3d739d */
+	color:#3090d9 /* slightly toned down */
+}
+
+h1
+{
+	background:#181818;
+	color:#3d739d;
+	font-size:1.5em;
+	font-weight:700;
+	margin:0;
+}
+
+h1 a,h1 a:visited
+{
+	color:#3d739d;
+	text-decoration:none;
+}
+
+h2 {
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+h3 {
+	margin-top:1em;
+	margin-bottom:0em;
+	color: #fbfcfd; /* almost white */
+}
+/*
+h2:first-child, h3:first-child, h4:first-child {
+    margin-top:0;
+} */
+.notopmargin {
+	margin-top:0;
+}
+h2 > a, h3 > a, h4 > a, h2 > a:visited, h3 > a:visited, h4 > a:visited  {
+	text-decoration: none;
+	color: #d0d4d6; 
+}
+h2 > a:hover, h3 > a:hover, h4 > a:hover {
+	/* text-decoration: underline; */
+	color: #3090d9; 
+}
+input[type=text], input[type=number], textarea, select
+{
+	background:#262728;
+	border:2px solid #436983;
+	border-radius:4px;
+	color:#eef0f2;
+	font-family:verdana;
+	font-size:1.38em;
+	font-weight:700;
+	height:1.6em;
+	margin:.11em 0;
+	max-width:100%;
+	padding:0 .4em;
+	text-align:left;
+}
+
+select {  
+	font-size:1.1em;
+	font-weight:500;
+	font-family: verdana;
+}
+
+input[type=text]:focus, input[type=number]:focus
+{
+	background:#2d2e2f;
+	border:2px solid #227ec4;
+	color:#fcfdfe;
+}
+.inputerrorborder { 
+	color: #834343 !important;
+}
+.textarea3 {
+	height: 4.1em;
+}
+
+.form22
+{
+	width:15em;
+}
+.form27
+{
+	width:20em;
+}
+.form32
+{
+	width:20.8em;
+}
+
+.form39
+{
+	width:24.9em;
+}
+
+.form52
+{
+	width:32.3em;
+}
+
+.form64
+{
+	width:40em;
+}
+
+.form8
+{
+	width:10em;
+}
+
+.form2
+{
+	width:3em;
+}
+
+.buttona
+{
+	background:#436983;
+	border:2px solid #262728;
+	border-radius:4px; 
+	color:#f6f6f6;
+	display:inline-block;
+	font-family:verdana;
+	font-size:1.4em;
+	font-weight:700; 
+	margin:.7em 0;
+	padding:.25em .4em;
+	padding:.33em .4em .25em .4em; /* shift down */
+	text-decoration:none;
+	vertical-align:center;
+}
+.buttona:visited
+{   
+	color:#f6f6f6;
+}
+.buttona:hover
+{
+	background:#227ec4;
+	color: #f6f6f6;
+}
+.buttonseed
+{
+	background-color:#968015; 
+}
+
+.buttonseed:hover
+{
+	background-color:#ceac05;
+}
+.buttonclr
+{
+	background-color:#834343; 
+}
+
+.buttonclr:hover
+{
+	background-color:#c22222;
+}
+ 
+fieldset
+{
+	border:none;
+}
+
+#errorboxred, .warningred /* are the classes in use? */
+{
+	background-color:#ffaca1;
+	color:#671907; 
+}
+#errorboxyellow, .warningyellow
+{
+	background-color:#fff7a1;
+	color:#676107; 
+}
+#messageboxgreen, .messagegreen
+{
+	background-color:#b8fac1;
+	color:#076707; 
+}
+#errorboxred,  #errorboxyellow,  #messageboxgreen
+{ 
+	display:none;
+}
+/* orphaned warning box
+{
+	background-color:#ffaca1;
+	color:#671907;
+	display:none;
+}
+*/
+.code, code, pre { 
+	background-color: #181818; /* nav background */
+	background-color: #212121; /* semi */
+	font-family:  'Verdana';
+	display: inline-block;
+	max-width: 95%; /* experimental */
+	word-wrap: break-all; /* experimental */
+} 
+.code, code {
+	padding: 0.07em 0.5em 0.03em 0.5em; 
+	margin-bottom: -0.16em; /* prevent line height diff for single-lines */ 
+	margin-bottom: -0.14em; /* correct overlaps */ 
+}
+.code {
+	background-color: #2d2e2f; /* a little brighter. mainly for non-copyable inline purposes. legacy? */	
+}
+pre {
+	padding: 0.3em 0.5em; 
+	margin: 0;
+	white-space: pre-wrap; /* investigate this for other fields */
+}
+.break {
+	word-break: break-all;
+}
+
+/* prevent superscript from affecting line height */
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.55em;
+}
+sub { 
+  top: 0.55em; 
+}
+ 
+td, th {border: 1px solid black; padding: 5px  }
+table { border-spacing: 0px; border-collapse: collapse;}
+
+
+
+#quicklinks {padding: 0; }
+#quicklinks a, #quicklinks a:hover
+{
+	color:#3491e0; 
+	text-decoration: none;
+}

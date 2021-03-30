@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+<title>MonKey Generator</title>
+<nano-donate data-address="nano_3too1sgot4c9h3zqsgk7tknh3cazcj5q7x7mn4kmh3ng76q6pqzth55ibhnh" data-address-owner="Dev @ MonkeyGen"></nano-donate> 
+<meta property="og:title" content="BANANO account generator +Monkey" />
+<meta property="og:description" content="Create an account in one click" />
+ <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<article id="mainArticle"> 
+<section>
+<h2>MonKey-Generator</h2>
+<h4>Enter a seed or have the website generate one for you. You can import the seed to a wallet of your choice later.</h4>
+   
+<form id="keyconverter">  
+	<div id="errorboxred"></div>
+	
+	
+	 <label for="fieldseed" style="font-weight:bold;">Seed</label><br />
+	<input type="text" id="fieldseed"  onfocus="removedash(this)" oninput="sanitizeandconvert(this.value, this.id);" autocomplete="off" class="form64 copy"  /> 	
+	  <br />
+	  
+	  <span style="display:none;"
+ <label for="fieldindex" style="font-weight:bold;">index:</label>
+	<input type="number" min="0" max="4294967295" id="fieldindex" oninput="sanitizeandconvert(this.value, this.id);" autocomplete="off" class="form8" maxlength="10" value="0" /> (max 4,294,967,295) <br />
+	
+	
+	<label for="fieldprivatekey" style="font-weight:bold;">Account private key:</label>
+	<input type="text" id="fieldprivatekey"  onfocus="removedash(this)" oninput="sanitizeandconvert(this.value, this.id);" autocomplete="off" class="form64 copy"   />
+	 <br />
+	<label for="fieldpublickey" style="font-weight:bold;">Account public key:</label>
+	<input type="text" id="fieldpublickey"  onfocus="removedash(this)"  oninput="sanitizeandconvert(this.value, this.id);" autocomplete="off" class="form64 copy"    />  <br />
+	
+	</span>
+	<label for="fieldaddress" style="font-weight:bold;">Account address:</label>
+	<br />
+	<input type="text" id="fieldaddress"  onfocus="removedash(this)"  oninput="sanitizeandconvert(this.value, this.id);" autocomplete="off" class="form64 copy"  />  <br />
+ 
+	<a class="buttona buttonseed"  href="#" role="button"  onclick="randomseed(); return false;" >random ape</a>
+	<a class="buttona buttonclr"  href="#" role="button"  onclick="document.getElementById('keyconverter').reset(); return false;" >clear</a> <br />
+	 
+  </form> 
+
+   
+ 
+</section>
+</article> 
+<aside id="sideBar">
+	<img class="w-100" id="generated-monKey" src="5.svg" alt="monKey 5">
+</aside>
+ <footer id="pageFooter">
+	<p id="donate">donations are appreciated: ban_1donateqfk8p5dx59dtaiexjrx4wwz1z9ktq8uyq143yr3xnwtdtwdcocsrx</p>
+ </footer>
+ <script src="script.js"></script>
+</body> 
